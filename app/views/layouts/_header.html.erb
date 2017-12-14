@@ -1,0 +1,21 @@
+ <header>
+    <div class="navbar">
+      <div class="heading">
+        <h1 class="title">TEST & ANSWER</h1>
+      </div>
+        <div class="btn">
+          <% if current_user %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "square_btn" %>
+          <% else %>
+            <%= link_to "ログイン",new_user_session_path , class: "square_btn" %>
+          <% end%>
+        <a href="#" class="square_btn">マイページ</a>
+      </div>
+    </div>
+
+    <div class="headimage">
+      <img src=http://www.ohiofarmer.com/sites/ohiofarmer.com/files/styles/article_featured_retina/public/0508F1-28210.jpg?itok=yZe_f_mi" alt="ユーザテスト">
+      <p>IMAGE</p>
+    </div>
+
+</header>

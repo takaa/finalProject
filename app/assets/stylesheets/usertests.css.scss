@@ -1,0 +1,139 @@
+body {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+
+
+.btn{
+  text-align:center;
+  margin-top: 15px;
+}
+
+.square_btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 1px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.headimage {
+  position: relative;
+}
+
+.headimage p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin:0;
+  padding:0;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.headimage img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+.contents {
+  //background-color: #ffffff;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.left-content {
+  height: 3000px;
+  width: 100%;
+  //background-color: #66cdaa;
+  float: left;
+}
+
+.article {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  background-color: #ffffff;
+  margin: 10px auto;
+}
+
+.article img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.article p{
+  color: black;
+  font-weight: bold;
+}
+
+.right-content {
+  height: 2200px;
+  width: 40%;
+  float: left;
+}
+
+.defaultlist
+,.defaultlist li{
+  padding:0px;
+  margin:0px;
+}
+
+.defaultlist li{
+  list-style-type:none !important;
+  list-style-image:none !important;
+  margin: 5px 0px 5px 0px !important;
+}
+
+.list li{
+  position:relative;
+  display: block;
+  padding: 5px 0px 5px 30px;
+  background: #ccc;
+  color: #444;
+  border-radius:15px 0px 0px 15px;
+}
+
+.list li:after{
+  content:'';
+  display:block;
+  position:absolute;
+  width:14px;
+  height: 14px;
+  top:7px;
+  left:5px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  height:50px;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
