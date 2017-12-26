@@ -5,55 +5,15 @@
 
     <div class="left-content">
       <div class="article">
-        <img src="http://u-x.academy/wp/wp-content/uploads/mainvisual_seminar02.jpg" alt="ユーザテスト">
-        <h2>
-          卒論のためのデータ収集
-          大学生のSNSの利用率について知りたい！
-        </h2>
-        </p>
-          大学生のSNSの利用率と、その利用が大学生活に与える関係性の研究をしています。
-        </p>
+        <% @usertests.each do |usertest| %>
+          <img src=<%= usertest.image %> alt="ユーザテスト">
+          <h2><%= usertest.text %></h2>
+          </p>
+            <%= usertest.user.nickname %>
+          </p>
+        <% end %>
       </div>
 
-      <div class="article">
-        <img src="http://u-x.academy/wp/wp-content/uploads/mainvisual_seminar02.jpg" alt="ユーザテスト">
-        <h2>
-          株式会社AAAが、新たに開発しているECアプリのUX調査！
-        </h2>
-         </p>
-          新サービスの使いやすさを実際に触れてレポートしてもらいます。
-        </p>
-      </div>
-
-      <div class="article">
-        <img src="http://u-x.academy/wp/wp-content/uploads/mainvisual_seminar02.jpg" alt="ユーザテスト">
-        <h2>
-          新しいインタラクションの研究の被験者を探しています！
-        </h2>
-         </p>
-          慶應義塾大学◯◯研究室の実験に参加していただける人を募集します。
-        </p>
-      </div>
-
-      <div class="article">
-        <img src="http://u-x.academy/wp/wp-content/uploads/mainvisual_seminar02.jpg" alt="ユーザテスト">
-        <h2>
-          卒論のためのデータ収集
-          大学生のSNSの利用率について知りたい！
-        </h2>
-        </p>
-          大学生のSNSの利用率と、その利用が大学生活に与える関係性の研究をしています。
-        </p>
-      </div>
-
-      <div class="article">
-        <img src="http://u-x.academy/wp/wp-content/uploads/mainvisual_seminar02.jpg" alt="ユーザテスト">
-        <h2>
-          新しいインタラクションの研究の被験者を探しています！
-        </h2>
-         </p>
-          慶應義塾大学◯◯研究室の実験に参加していただける人を募集します。
-        </p>
       </div>
 
     </div>

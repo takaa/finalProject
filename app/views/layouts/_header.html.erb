@@ -6,10 +6,12 @@
         <div class="btn">
           <% if current_user %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "square_btn" %>
+            <a class="square_btn" href="/users/<%= current_user.id %>">マイページ</a>
+            <a class="square_btn" href="/usertests/new">投稿する</a>
           <% else %>
-            <%= link_to "ログイン",new_user_session_path , class: "square_btn" %>
+            <%= link_to "ログイン", new_user_session_path, :class => 'post', class: "square_btn"%>
+            <%= link_to "新規登録", new_user_registration_path, :class => 'post', class: "square_btn"%>
           <% end%>
-        <a href="#" class="square_btn">マイページ</a>
       </div>
     </div>
 
