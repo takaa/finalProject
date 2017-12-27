@@ -1,0 +1,37 @@
+<div class="contents clearfix">
+      <div class="left-content">
+        <div class="article">
+          <% if user_signed_in? && current_user.id == @usertest.user_id %>
+            <%= link_to '編集', "/usertests/#{@usertest.id}/edit", method: :get, class: "square_btn"%>
+            <%= link_to '削除', "/usertests/#{@usertest.id}", method: :delete, class: "square_btn" %>
+          <% end %>
+            <img src=<%= @usertest.image %> alt="ユーザテスト">
+            <h2><%= @usertest.text %></h2>
+            <a href="/users/<%= @usertest.user_id %>" >
+            <span>投稿者</span><%= @usertest.user.nickname %>
+            </a>
+          </div>
+          <div class="formset">
+          <!-- ここからフォーム -->
+          <% if current_user %>
+            <%= form_tag("/usertests/#{@usertest.id}/comments", method: :post) do %>
+            <div class="text_form">
+            <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
+            </div>
+            <input type="submit" value="SENT">
+      <% end %>
+    <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+      </div>
+</div>

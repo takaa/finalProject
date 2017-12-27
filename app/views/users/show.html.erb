@@ -1,12 +1,8 @@
 <div class="contents clearfix">
 <!-- <div class="contents row" > -->
-    <p><%= @nickname %>さんの投稿一覧</p>
-     <div class="article">
+  <p><%= @nickname %>さんの投稿一覧</p>
         <% @usertests.each do |usertest| %>
-          <img src=<%= usertest.image %> alt="ユーザテスト">
-          <h2><%= simple_format(usertest.text) %></h2>
-          </p>
-          </p>
+          <%= render partial: "usertests/usertest", locals: { usertest: usertest} %>
         <% end %>
-    </div>
+      <%= paginate(@usertests) %>
 </div>

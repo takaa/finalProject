@@ -50,3 +50,6 @@ end
   # gem 'sprockets', '2.11.0'
   gem "sprockets" , "~> 2.11.3"
   gem 'devise'
+  gem 'kaminari'
+  gem 'carrierwave'
+  gem 'rmagick', require: 'RMagick'

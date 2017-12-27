@@ -1,41 +1,12 @@
 <%= render "layouts/header" %>
 
 
-  <div class="contents clearfix">
+<div class="contents clearfix">
 
-    <div class="left-content">
-      <div class="article">
-        <% @usertests.each do |usertest| %>
-          <img src=<%= usertest.image %> alt="ユーザテスト">
-          <h2><%= usertest.text %></h2>
-          </p>
-            <%= usertest.user.nickname %>
-          </p>
-        <% end %>
-      </div>
+          <% @usertests.each do |usertest| %>
+            <%= render partial: "usertest", locals: { usertest: usertest} %>
+      <% end %>
 
-      </div>
+  <%= paginate(@usertests) %>
+</div>
 
-    </div>
-
-  <!--   <div class="right-content">
-      <ul class="defaultlist list">
-        <li>アンケート</li>
-          <ul>
-            <li>大学生</li>
-            <li>高校生</li>
-            <li>フリーランス</li>
-          </ul>
-        <li>ユーザテスト</li>
-        <ul>
-            <li>大学生</li>
-            <li>高校生</li>
-            <li>フリーランス</li>
-          </ul>
-        <li>フィードバック</li>
-      </ul>
-    </div> -->
-
-  </div>
-
-<%= render "layouts/footer" %>

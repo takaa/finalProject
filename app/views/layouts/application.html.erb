@@ -5,6 +5,27 @@
     <%= csrf_meta_tags %>
     <title>Final Project</title>
   </head>
+  <header>
+    <div class="navbar">
+      <div class="heading">
+        <h1 class="title">
+          <%= link_to "TEST & ANSWER", root_path, method: :get %></h1>
+      </div>
+        <div class="btn">
+          <% if current_user %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "square_btn" %>
+            <%= current_user.nickname %>
+            <a class="square_btn" href="/users/<%= current_user.id %>">マイページ</a>
+            <a class="square_btn" href="/usertests/new">投稿する</a>
+          <% else %>
+            <%= link_to "ログイン", new_user_session_path, :class => 'post', class: "square_btn"%>
+            <%= link_to "新規登録", new_user_registration_path, :class => 'post', class: "square_btn"%>
+          <% end%>
+      </div>
+    </div>
+
+
+</header>
   <body>
 
     <%= yield %>

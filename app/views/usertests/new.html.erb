@@ -1,16 +1,23 @@
 <div class="contents">
-  <div class="article">
-  <%= form_tag('/usertests', method: :post) do %>
+  <div class="container">
+  <%= form_tag('/usertests', method: :post ,multipart: true) do %>
    <h3>
       投稿する
     </h3>
     <div class="formset">
-    <div class="image_form">
-      <input placeholder="Image Url" type="text" name="image" autofocus="true">
+
+    <div>
+      <%= file_field_tag :picture%>
     </div>
+
     <div class="text_form">
     <textarea placeholder="text" name="text" cols="30" rows="10"></textarea>
     </div>
+
+    <div class="text_form">
+    <textarea placeholder="detail" name="detail" cols="30" rows="10"></textarea>
+    </div>
+
     <input type="submit" value="SENT">
     </div>
   <% end %>

@@ -1,0 +1,12 @@
+<div class="article">
+          <%= link_to '詳細', "/usertests/#{usertest.id}", method: :get, class: "square_btn"%>
+          <% if user_signed_in? && current_user.id == usertest.user_id %>
+            <%= link_to '編集', "/usertests/#{usertest.id}/edit", method: :get, class: "square_btn"%>
+            <%= link_to '削除', "/usertests/#{usertest.id}", method: :delete, class: "square_btn" %>
+          <% end %>
+            <img src=<%= usertest.picture %> alt="ユーザテスト">
+            <h2><%= usertest.text %></h2>
+            <a href="/users/<%= usertest.user_id %>" >
+            <span>投稿者</span><%= usertest.user.nickname %>
+            </a>
+</div>
