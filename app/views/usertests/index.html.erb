@@ -2,11 +2,10 @@
 
 
 <div class="contents clearfix">
-
-          <% @usertests.each do |usertest| %>
+      <% @usertests.each do |usertest| %>
             <%= render partial: "usertest", locals: { usertest: usertest} %>
       <% end %>
-
   <%= paginate(@usertests) %>
 </div>
 
+<%= render "layouts/footer" %>

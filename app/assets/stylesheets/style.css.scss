@@ -1,0 +1,24 @@
+body {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.btn{
+  text-align:center;
+  margin-top: 15px;
+}
+
+.square_btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    color: #67c5ff;
+}
