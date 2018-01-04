@@ -54,6 +54,9 @@ end
   gem 'carrierwave'
   gem 'rmagick', require: 'RMagick'
 
+  gem 'omniauth'
+  gem 'omniauth-facebook'
+
 group :production do
   gem 'rails_12factor'
 end
