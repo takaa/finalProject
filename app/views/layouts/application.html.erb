@@ -6,11 +6,9 @@
     <title>Final Project</title>
   </head>
   <header>
-    <div class="navbar">
+    <!-- <div class="navbar"> -->
       <div class="heading">
-        <h1 class="title">
-          <%= link_to "TEST & ANSWER", root_path, method: :get %>
-        </h1>
+          <%= link_to "in-house", root_path, method: :get, class: "title"%>
       </div>
         <div class="btn">
           <% if current_user %>
@@ -22,7 +20,7 @@
             <%= link_to "新規登録", new_user_registration_path, :class => 'post', class: "square_btn"%>
           <% end%>
       </div>
-    </div>
+    <!-- </div> -->
 
 
 </header>

@@ -5,7 +5,9 @@
       <% @usertests.each do |usertest| %>
             <%= render partial: "usertest", locals: { usertest: usertest} %>
       <% end %>
-  <%= paginate(@usertests) %>
+      <div class="paginate">
+       <%= paginate(@usertests) %>
+      </div>
 </div>
 
-<%= render "layouts/footer" %>
+<%#= render "layouts/footer" %>

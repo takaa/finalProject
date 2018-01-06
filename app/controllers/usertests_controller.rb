@@ -10,7 +10,7 @@ class UsertestsController < ApplicationController
   end
 
   def create
-    Usertest.create(image: usertest_params[:image], text: usertest_params[:text], detail: usertest_params[:detail],picture: usertest_params[:picture],user_id: current_user.id)
+    Usertest.create(image: usertest_params[:image], text: usertest_params[:text], detail: usertest_params[:detail], picture: usertest_params[:picture],user_id: current_user.id, doing: usertest_params[:doing], wants: usertest_params[:wants])
   end
 
   def destroy
@@ -36,7 +36,7 @@ class UsertestsController < ApplicationController
 
   private
   def usertest_params
-    params.permit(:image, :text, :detail, :picture)
+    params.permit(:image, :text, :detail, :picture, :doing, :wants)
   end
 
   def move_to_index

@@ -1,5 +1,5 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #fdfdfd;
   font-size: 14px;
   color: #333;
   margin: 0 auto;
@@ -11,6 +11,12 @@ h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
 
+.contents {
+  /*background-color: #87ceeb;*/
+  /*width: 60%;*/
+  margin: 30px 30px 30px 30px;
+}
+
 .btn{
   text-align:center;
   margin-top: 15px;
@@ -20,5 +26,27 @@ h1,h2,h3,h4,h5,h6,p {
     display: inline-block;
     padding: 0.5em 1.5em;
     text-decoration: none;
-    color: #67c5ff;
+    color: #2f2f2f;
 }
+
+.square_btn:hover{
+  color: #ff9999;
+  border-bottom: 2pt solid #ff9999;
+}
+
+.device_btn{
+  display: inline-block;
+  padding: 20px 40px;
+  text-decoration: none;
+  color: #2f2f2f;
+}
+
+.device_btn:hover{
+  color: #ff9999;
+  border-bottom: 2pt solid #ff9999;
+}
+
+.paginate{
+   text-align: center;
+}
+

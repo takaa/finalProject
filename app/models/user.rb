@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
         uid:      auth.uid,
         provider: auth.provider,
         email:    auth.info.email,
+        nickname: auth.info.name,
         password: Devise.friendly_token[0, 20]
       )
     end

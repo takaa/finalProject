@@ -1,0 +1,88 @@
+.formset {
+    margin: 50px auto;
+  /*height: 2000px;*/
+  /*position: absolute;*/
+ /* top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);*/
+  /*background-color: #f0f0f0;*/
+}
+
+.form{
+    text-align: center;
+}
+
+.form h2{
+  text-align: center;
+}
+
+.form h3{
+    text-align: center;
+}
+
+.formbtn{
+    display: inline-block;
+    width: 600px;
+    height: 50px;
+    border-radius: 3px;
+    margin-top: 1.0em;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24pt;
+    background-color: #ff9999;
+    transition: .4s;
+}
+
+.formbtn:hover {
+  background-color: #ff6666;
+}
+
+.a_picture{
+    margin: 50px auto;
+}
+
+.forms{
+    margin: 0 auto;
+}
+
+textarea[name="text"]{
+    width: 600px;
+    height: 100px;
+    margin-top: 0.5em;
+    padding: 0.8em;
+    outline: none;
+    border: 1px solid #ffcccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 16px;
+    resize: none;
+}
+
+textarea[name="text"]:focus{
+    box-shadow: 0 0 7px #ffcccc;
+    border: 1px solid #ffcccc;
+}
+
+textarea[name="detail"],textarea[name="wants"],textarea[name="doing"]{
+    margin-top: 0.5em;
+    padding: 0.8em;
+    width: 600px;
+    height: 200px;
+    outline: none;
+    border: 1px solid #ffcccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 16px;
+    resize: none;
+}
+
+textarea[name="detail"]:focus,
+textarea[name="wants"]:focus,
+textarea[name="doing"]:focus{
+    box-shadow: 0 0 7px #ffcccc;
+    border: 1px solid #ffcccc;
+}
+

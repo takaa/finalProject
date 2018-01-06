@@ -1,28 +1,47 @@
 <div class="contents clearfix">
-      <div class="left-content">
-        <div class="article">
-          <% if user_signed_in? && current_user.id == @usertest.user_id %>
-            <%= link_to '編集', "/usertests/#{@usertest.id}/edit", method: :get, class: "square_btn"%>
-            <%= link_to '削除', "/usertests/#{@usertest.id}", method: :delete, class: "square_btn" %>
-          <% end %>
-            <img src=<%= @usertest.image %> alt="ユーザテスト">
-            <h2><%= @usertest.text %></h2>
-            <a href="/users/<%= @usertest.user_id %>" >
-            <span>投稿者</span><%= @usertest.user.nickname %>
-            </a>
-          </div>
-          <div class="formset">
-          <!-- ここからフォーム -->
-          <% if current_user %>
-            <%= form_tag("/usertests/#{@usertest.id}/comments", method: :post) do %>
-            <div class="text_form">
-            <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
-            </div>
-            <input type="submit" value="SENT">
+  <div class="article">
+    <div class="picture">
+      <%= image_tag @usertest.picture.to_s %>
+    </div>
+    <div class="a_title">
+      <h2><%= @usertest.text %></h2>
+    </div>
+
+    <div class="a_text">
+     <p><%= @usertest.detail %></p>
+    </div>
+
+    <div class="a_doing">
+      <p><h3>やっていること</h3><%= @usertest.doing %></p>
+    </div>
+
+    <div class="a_doing">
+      <p><h3>お願いしたいこと</h3><%= @usertest.wants %></p>
+    </div>
+
+
+    <%= link_to @usertest.user.nickname, "/users/#{@usertest.user_id}", method: :get, class: "square_btn"%>
+    <% if user_signed_in? && current_user.id == @usertest.user_id %>
+      <%= link_to '編集', "/usertests/#{@usertest.id}/edit", method: :get, class: "square_btn"%>
+      <%= link_to '削除', "/usertests/#{@usertest.id}", method: :delete, class: "square_btn" %>
+    <% end %>
+  </div>
+
+
+    <!-- ここからフォーム -->
+  <div class="comment_form">
+    <% if current_user %>
+      <%= form_tag("/usertests/#{@usertest.id}/comments", method: :post) do %>
+        <div class="comment_area">
+          <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
+        </div>
+          <input type="submit" value="SENT" class="formbtn">
       <% end %>
     <% end %>
-    <div class="comments">
-      <h4>＜コメント一覧＞</h4>
+  </div>
+
+  <div class="comments">
+    <h4>＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
@@ -31,7 +50,6 @@
           </p>
         <% end %>
       <% end %>
-    </div>
   </div>
-      </div>
+  </div>
 </div>

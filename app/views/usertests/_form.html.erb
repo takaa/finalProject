@@ -1,17 +1,26 @@
 <div class="formset">
+　<div class="form">
+    <h2>募集する</h2>
+
+    <div class="a_picture">
+      <%= file_field_tag :picture, class: "tagbtn"%>
+    </div>
+
+    <h3>誰に向けたものですか？</h3>
+    <textarea placeholder="100文字以内" name="text" cols="30" rows="10" maxlength="100"></textarea>
+
+    <h3>内容</h3>
+    <textarea placeholder="200文字以内" name="detail" cols="30" rows="10" maxlength="400"></textarea>
+
+    <h3>やっていること</h3>
+    <textarea placeholder="200文字以内" name="doing" cols="30" rows="10" maxlength="400"></textarea>
+
+    <h3>お願いしたいこと</h3>
+    <textarea placeholder="200文字以内" name="wants" cols="30" rows="10" maxlength="400"></textarea>
 
     <div>
-      <%= file_field_tag :picture%>
+    <input type="submit" value="SENT" class="formbtn">
     </div>
 
-    <div class="text_form">
-    <textarea placeholder="text" name="text" cols="30" rows="10"></textarea>
-    </div>
-
-    <div class="text_form">
-    <textarea placeholder="detail" name="detail" cols="30" rows="10"></textarea>
-    </div>
-
-    <input type="submit" value="SENT">
-
+　</div>
 </div>
