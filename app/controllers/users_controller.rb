@@ -3,5 +3,6 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @nickname = user.nickname
     @usertests = user.usertests.page(params[:page]).per(5).order("created_at DESC")
+    @introduction = user.introduction
   end
 end

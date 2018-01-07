@@ -3,13 +3,11 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
-    <title>Final Project</title>
+    <title>inhouse/あなたを必要としているユーザーを見つけよう</title>
   </head>
   <header>
-    <!-- <div class="navbar"> -->
-      <div class="heading">
-          <%= link_to "in-house", root_path, method: :get, class: "title"%>
-      </div>
+    <div class="navbar">
+      <%= link_to (image_tag 'inhouse.png', :size => "150x42", :alt => "アイコン"), root_path, method: :get, class: "title"%>
         <div class="btn">
           <% if current_user %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "square_btn" %>
@@ -20,7 +18,7 @@
             <%= link_to "新規登録", new_user_registration_path, :class => 'post', class: "square_btn"%>
           <% end%>
       </div>
-    <!-- </div> -->
+    </div>
 
 
 </header>

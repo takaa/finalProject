@@ -1,36 +1,41 @@
 <div class="contents row" >
+  <div class="device_form">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
-    <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
+    <%= f.label :nickname , class: "f_label"%> <em>(10 characters maximum)</em><br />
+    <%= f.text_field :nickname, autofocus: true, maxlength: "10", class: "f_area" %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.label :email , class: "f_label"%><br />
+    <%= f.email_field :email, autofocus: true, class: "f_area" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password , class: "f_label"%>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off" , class: "f_area"%>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.label :password_confirmation , class: "f_label"%><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" , class: "f_area" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <label for="loginbtn" class="login">
+    <div>Sign up</div>
+    <%= f.submit "Sign up", id: "loginbtn"%>
+    </label>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
 </div>

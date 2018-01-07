@@ -1,6 +1,8 @@
-<div class="contents clearfix">
-<!-- <div class="contents row" > -->
-  <p><%= @nickname %>さんの投稿一覧</p>
+<div class="contents">
+  <div class="profile">
+    <h2><%= @nickname %></h2>
+  </div>
+   <h3><%= @nickname %>さんの投稿一覧</h3>
         <% @usertests.each do |usertest| %>
           <%= render partial: "usertests/usertest", locals: { usertest: usertest} %>
         <% end %>
