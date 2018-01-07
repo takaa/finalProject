@@ -12,17 +12,17 @@
 
         <h3>見出し(100文字以内)</h3>
         <!-- <textarea placeholder="" name="text" cols="30" rows="10" maxlength="100" autofocus="true"><%= @usertest.text %></textarea> -->
-        <%= f.text_area :text,placeholder: "100文字以内", rows: "10", cols: "30", maxlength: "100", autofocus: "true" %>
+        <%= f.text_area :text,placeholder: "100文字以内", rows: "10", cols: "30", maxlength: "100", autofocus: "true" , :class => 'text'%>
         <h3>内容(300文字以内)</h3>
         <!-- <textarea placeholder="300文字以内" name="detail" cols="30" rows="10" maxlength="300"><%= @usertest.detail %></textarea> -->
-        <%= f.text_area :detail, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300" %>
+        <%= f.text_area :detail, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300" ,:class => 'detail'%>
 
         <h3>やっていること(300文字以内)</h3>
         <!-- <textarea placeholder="300文字以内" name="doing" cols="30" rows="10" maxlength="300"><%= @usertest.doing %></textarea> -->
-        <%= f.text_area :doing, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300" %>
+        <%= f.text_area :doing, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300" ,:class => 'doing'%>
         <h3>お願いしたいこと(300文字以内)</h3>
         <!-- <textarea placeholder="300文字以内" name="wants" cols="30" rows="10" maxlength="300"><%= @usertest.wants %></textarea> -->
-        <%= f.text_area :wants, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300" %>
+        <%= f.text_area :wants, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300",:class => 'wants' %>
         <div>
         <!-- <input type="submit" value="SENT" class="formbtn"> -->
         <%= f.submit "submit" , class: "formbtn"%>
