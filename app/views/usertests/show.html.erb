@@ -22,7 +22,7 @@
     </div>
 
 
-    <%= link_to @usertest.user.nickname, "/users/#{@usertest.user_id}", method: :get, class: "square_btn"%>
+    <%= link_to @usertest.user.nickname+"のページへ", "/users/#{@usertest.user_id}", method: :get, class: "square_btn"%>
     <% if user_signed_in? && current_user.id == @usertest.user_id %>
       <%= link_to '編集', "/usertests/#{@usertest.id}/edit", method: :get, class: "square_btn"%>
       <%= link_to '削除', "/usertests/#{@usertest.id}", method: :delete, class: "square_btn" %>
