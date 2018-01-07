@@ -25,7 +25,7 @@ class UsertestsController < ApplicationController
   def update
     usertest = Usertest.find(params[:id])
     if usertest.user_id == current_user.id
-      usertest.update(usertest_params)
+      usertest.update(usertest_params2)
     end
   end
 
@@ -37,6 +37,10 @@ class UsertestsController < ApplicationController
   private
   def usertest_params
     params.permit(:image, :text, :detail, :picture, :doing, :wants)
+  end
+
+  def usertest_params2
+    params.require(:usertest).permit(:image, :text, :detail, :picture, :doing, :wants)
   end
 
   def move_to_index

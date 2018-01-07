@@ -1,28 +1,31 @@
 <div class="contents clearfix">
-    <%= form_tag("/usertests/#{@usertest.id}", method: :patch ) do %>
-
+<%= form_for(@usertest)do |f|%>
 <div class="formset">
 　<div class="form">
     <h2>編集する</h2>
-        <label for="filetag" class="file">
-            <div>新たにファイルを選択</div>
-            <%= file_field_tag :picture , id: "filetag"%>
-        </label>
+        <!-- <label for="filetag" class="file"> -->
+            <!-- <div>新たにファイルを選択</div> -->
+        <%= f.label :picture,"ファイルを選択",class: "file"%>
+          <%= f.file_field :picture %>
+
+        <!-- </label> -->
 
         <h3>見出し(100文字以内)</h3>
-        <textarea placeholder="100文字以内" name="text" cols="30" rows="10" maxlength="100" autofocus="true"><%= @usertest.text %></textarea>
-
+        <!-- <textarea placeholder="" name="text" cols="30" rows="10" maxlength="100" autofocus="true"><%= @usertest.text %></textarea> -->
+        <%= f.text_area :text,placeholder: "100文字以内", rows: "10", cols: "30", maxlength: "100", autofocus: "true" %>
         <h3>内容(300文字以内)</h3>
-        <textarea placeholder="300文字以内" name="detail" cols="30" rows="10" maxlength="300"><%= @usertest.detail %></textarea>
+        <!-- <textarea placeholder="300文字以内" name="detail" cols="30" rows="10" maxlength="300"><%= @usertest.detail %></textarea> -->
+        <%= f.text_area :detail, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300" %>
 
         <h3>やっていること(300文字以内)</h3>
-        <textarea placeholder="300文字以内" name="doing" cols="30" rows="10" maxlength="300"><%= @usertest.doing %></textarea>
-
+        <!-- <textarea placeholder="300文字以内" name="doing" cols="30" rows="10" maxlength="300"><%= @usertest.doing %></textarea> -->
+        <%= f.text_area :doing, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300" %>
         <h3>お願いしたいこと(300文字以内)</h3>
-        <textarea placeholder="300文字以内" name="wants" cols="30" rows="10" maxlength="300"><%= @usertest.wants %></textarea>
-
+        <!-- <textarea placeholder="300文字以内" name="wants" cols="30" rows="10" maxlength="300"><%= @usertest.wants %></textarea> -->
+        <%= f.text_area :wants, placeholder: "300文字以内",  cols: "30",rows: "10", maxlength: "300" %>
         <div>
-        <input type="submit" value="SENT" class="formbtn">
+        <!-- <input type="submit" value="SENT" class="formbtn"> -->
+        <%= f.submit "submit" , class: "formbtn"%>
       </div>
 
   </div>
